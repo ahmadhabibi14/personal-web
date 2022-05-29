@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body class="text-gray-700">
+  {{- partial "header.html" . -}}
+  <main class="min-h-screen w-11/12 md:w-8/12 mx-auto mt-24 mb-6">
+      
+    <h3 class="font-bold"> {{ .Title }} </h3>
+
+    <hr class="my-4" />
+
+    <p>
+      {{ .Content }}
+    </p>
+
+    </main>
+    {{- partial "footer.html" . -}}
+    {{- partial "_emailjs.html" . -}}
+    <script type="text/javascript" src="/js/script.js"></script>
+  </body>
+</html>

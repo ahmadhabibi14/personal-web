@@ -1,0 +1,12 @@
+<!-- Get src param from shortcode -->
+{{ $src := $.Get "src"}}
+
+<!-- Get alt param from shortcode -->
+{{ $alt := $.Get "alt"}}
+
+<!-- Get image -->
+{{$img := resources.Get $src}}
+
+<p class="text-center my-4 mx-auto">
+  <img src="{{ $img.Permalink }}" class="rounded-md shadow-md border border-gray-200 mx-auto" alt="{{ $alt }}" width="90%">
+</p>

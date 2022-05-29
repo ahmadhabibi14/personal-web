@@ -1,0 +1,24 @@
+baseURL = 'https://habibi2004.tech/'
+languageCode = 'en-us'
+title = 'HBBIIIII - Ahmad Rizky Nusantara Habibi'
+theme = 'habitheme'
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[[module.mounts]]
+source = "static/images"
+target = "assets/images"
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'dracula'
+    tabWidth = 4

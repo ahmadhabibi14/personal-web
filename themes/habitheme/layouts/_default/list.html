@@ -1,16 +1,25 @@
 {{ define "main" }}
 
-<h3 class="font-bold"> {{ .Title }} </h3>
+<h3> {{ .Title }} </h3>
 
 <hr class="my-4" />
 
+<blockquote class="text-base">
+  <q>
+    People can be smart as high as sky, but as long as he don't write any thing, he will gone in society and the history</q>
+</blockquote>
+<blockquote class="text-base">
+  <q>
+    If you wants your name to remembered by history, do something useful to write, or at least write something useful to read
+  </q>
+</blockquote>
 <p>
-  Looks like I write more about tech. Enjoy reading! 😉, Mostly in Indonesian 🇮🇩. Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Ahh, those quotes make me keep motivated to do writing. My journey in writing format was here. I write more about tech and mostly with Indonesian language 🇮🇩. Enjoy reading 😉.
 </p>
 
 <br>
 
-<div class="flex flex-col space-y-3 md:rounded-md md:shadow-md md:border md:border-gray-200 md:p-4 md:w-11/12 md:mx-auto lg:px-6">
+<div class="flex flex-col space-y-3 md:rounded-xl md:shadow-md md:border md:border-gray-200 md:p-4 md:w-11/12 md:mx-auto lg:px-6">
 
   {{ range (.Site.RegularPages.GroupByDate "2006") }}
   <div class="flex flex-col space-y-2 mt-1 mb-2">
@@ -20,7 +29,7 @@
       <span class="text-2xl font-bold">{{ .Key }}</span>
     </div>
 
-    <ul class="w-full ml-4 flex flex-col space-y-2 font-medium">
+    <ul class="w-full ml-4 flex flex-col space-y-2 font-medium list-none">
       
       {{ range where .Pages "Section" "blog"}}
       <li class="flex flex-row items-center content-center space-x-2">

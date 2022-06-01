@@ -20,6 +20,10 @@ html::-webkit-scrollbar-thumb{
   color: #FFFF;
 }
 
+main {
+  min-height: 84vh;
+}
+
 ol {
   list-style-type: decimal;
   margin: 15px 0;
@@ -30,6 +34,11 @@ ul {
   margin: 15px 0;
 }
 
+ul > li::marker {
+  color: #4299E1;
+  font-size: 22px;
+}
+
 li {
   font-size: 1rem;
   line-height: 1.50rem;
@@ -37,6 +46,11 @@ li {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
+  font-weight: 700 !important;
+}
+
+strong {
+  font-weight: 700 !important;
 }
 
 h1 {
@@ -79,6 +93,11 @@ pre {
   word-wrap: break-word;
 }
 
+.fit-content {
+  height: fit-content;
+  width: fit-content;
+}
+
 /* QUOTES */
 blockquote {
   font-size: 18px;
@@ -95,6 +114,15 @@ blockquote {
 }
 blockquote > p {
   margin: auto auto;
+}
+
+.skill-card {
+  width: 124px;
+  margin: 15px;
+}
+
+.mb-5 {
+  margin-bottom: 1rem;
 }
 
 .highlight pre {

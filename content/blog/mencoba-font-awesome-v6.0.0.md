@@ -36,7 +36,6 @@ Kalau sudah, font awesome siap kita pakai. Caranya pun cukup mudah, contoh saya 
 ```html
 <i class="fa-solid fa-basketball"></i>
 ```
-**Hasilnya** : {{< awesome fa-solid fa-basketball >}}
 
 Jadi, font awesome cukup berguna untuk menambah icon untuk website kita. Dapat mempermudah kita tanpa menambah ikon secara manual karena font awesome menyediakan banyak sekali ikon gratis maupun berbayar.
 

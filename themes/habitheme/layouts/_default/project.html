@@ -1,22 +1,44 @@
 {{ define "main" }}
 
-<h3 class="font-bold"> {{ .Title }} </h3>
+<h3> {{ .Title }} </h3>
 
 <hr class="my-4" />
 
 <div>
     {{ .Content }}
 </div>
+<blockquote class="text-base">
+    <q>
+        Don't be a Programmer, be a Problem Solver
+    </q>
+</blockquote>
 
 <br><hr><br>
 
-<div class="flex flex-wrap flex-row justify-center items-center space-x-4 space-y-4">
+<div class="flex flex-wrap flex-row justify-center items-stretch content-stretch">
 
     {{ range .Site.Data.projects }}
-    <div class="flex flex-col w-24 border border-gray-200 shadow-md p-10 h-auto">
-        <h6>{{ .name }}</h6>
-        <hr class="my-4" />
-        <p>{{ .description }}</p>
+    <div class="w-full sm:w-5/12 flex flex-no-wrap flex-col justify-between border border-gray-300 shadow-md px-10 py-8 h-auto rounded-xl md:m-3 mb-3">
+
+        <div class="flex flex-col space-y-2 mb-5">
+            <p class="font-bold text-lg">{{ .name }}</p>
+            <hr/>
+            <p>{{ .description }}</p>
+        </div>
+
+        <div class="flex flex-row justify-end space-x-2">
+            <a class="hover:text-blue-500" href="{{ .source }}" title="Source code" target="_blank">
+                <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+            </a>
+            <a href="{{ .view }}" class="hover:text-blue-500" title="View" target="_blank">
+                <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </a>
+        </div>
+
     </div>
     {{ end }}
 

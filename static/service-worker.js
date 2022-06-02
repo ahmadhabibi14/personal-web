@@ -1,10 +1,10 @@
-const CACHE_NAME = 'SW-001';
+const CACHE_NAME = 'serviceWorker';
 const toCache = [
   '/',
   '/index.html',
   '/css/syntax.css',
+  '/habiLogo.svg',
   '/js/script.js',
-  '/js/dark-mode.js',
 ];
 
 self.addEventListener('install', function(event) {

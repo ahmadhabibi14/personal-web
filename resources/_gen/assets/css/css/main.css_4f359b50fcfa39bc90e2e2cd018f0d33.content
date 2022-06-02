@@ -759,10 +759,11 @@ ol {
 
 ul {
   list-style-type: disc;
-  margin: 15px 0;
+  margin: 15px 0 15px 17px;
 }
 
 ul > li::marker {
+  margin-left: 8px;
   color: #4299E1;
   font-size: 22px;
 }

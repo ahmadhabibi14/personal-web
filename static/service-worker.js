@@ -2,7 +2,18 @@ const CACHE_NAME = 'serviceWorker';
 const toCache = [
   '/',
   '/index.html',
+  '/about/index.html',
+  '/project/index.html',
+  '/contact/index.html',
+  '/blog/index.html',
+  '/404.html',
+  '/css/*',
   '/css/syntax.css',
+  '/css/main.min.06205cf7e09b95b02488738717feba19fec08cebf86d1e246eb46a7fc8a789d5.css',
+  '/images/avatar.png',
+  '/images/*',
+  '/icons/*',
+  '/webfonts/*',
   '/habiLogo.svg',
   '/js/script.js',
 ];

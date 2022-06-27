@@ -2,6 +2,7 @@
 title: "Membuat Efek Blur Pada Website"
 date: 2022-01-01
 draft: false
+lang: id
 ---
 
 Efek blur pada navigasi bar akan membuat tampilan menjadi lebih keren dan meningkatkan UI website. Untuk membuatnya juga cukup mudah, kali ini saya memakai Bootstrap dan Font Awesome sebagai framework CSS nya.

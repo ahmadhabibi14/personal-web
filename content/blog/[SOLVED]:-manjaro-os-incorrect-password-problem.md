@@ -2,6 +2,7 @@
 title: "[SOLVED]: Manjaro OS Incorrect Password Problem"
 date: 2022-01-08
 draft: false
+lang: en
 ---
 
 {{< images src="/images/[SOLVED]:-manjaro-os-incorrect-password-problem/01.jpg" alt="image-01" >}}

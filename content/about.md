@@ -10,12 +10,11 @@ draft: false
 
 #### What I'm doing now
 
-* Waiting to go to college, I couldn't be patient
-* Enjoying life
-* Learning Reactjs
-* Looking for new video games to play
+-   Going to college. Yes !! everyday, as a student
+-   Enjoying life
+-   Looking for good taste music to listen
 
 #### Random Facts
 
-* I like memes, feels like can't live without memes
-* My favorite anime is Detective Conan
+-   I like memes
+-   My favorite anime is Detective Conan

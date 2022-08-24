@@ -4,22 +4,25 @@
 
 <hr class="my-6" />
 
-<div>
-    {{ .Content }}
-</div>
+<div>{{ .Content }}</div>
 
 <hr class="my-6" />
 
-<h4 class="text-center"> Technologies I've worked with : </h4>
+<h4 class="text-center">Technologies I've worked with :</h4>
 
 <div class="flex flex-wrap justify-center md:w-11/12 w-full mx-auto">
     {{ range .Site.Data.technologies }}
-    <div class="cursor-pointer transition-all duration-100 ease-linear hover:scale-105 flex flex-col justify-end border border-gray-300 shadow-md rounded-xl text-center skill-card" title="{{ .name }}">
+    <a
+        href="{{ .web }}"
+        class="cursor-pointer transition-all duration-100 ease-linear hover:scale-105 flex flex-col justify-end border border-gray-300 shadow-md rounded-xl text-center skill-card"
+        title="{{ .name }}"
+        target="_blank"
+    >
         <span class="p-3 flex justify-center">
-            <img src="{{ .image }}" alt="{{ .name }}" width="55">
+            <img src="{{ .image }}" alt="{{ .name }}" width="55" />
         </span>
         <strong class="mb-3">{{ .name }}</strong>
-    </div>
+    </a>
     {{ end }}
 </div>
 

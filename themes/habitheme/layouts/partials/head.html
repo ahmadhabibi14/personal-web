@@ -1,25 +1,36 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="author" content="Ahmad Habibi">
-<meta name="keywords" content="Blog, Tech, JavaScript, Static Site Generator, Linux, HTML, CSS, Personal Web, Portofolio">
-<meta name="google-site-verification" content="L5chh5oVhWYYp1IqtLhmsiMPhS5k-FSFng2yl7F-F2s" />
+<meta charset="UTF-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="author" content="Ahmad Habibi" />
+<meta
+  name="keywords"
+  content="Blog, Tech, JavaScript, Static Site Generator, Linux, HTML, CSS, Personal Web, Portofolio"
+/>
+<meta
+  name="google-site-verification"
+  content="L5chh5oVhWYYp1IqtLhmsiMPhS5k-FSFng2yl7F-F2s"
+/>
 <meta name="description" content="Blog and Resume for Ahmad Habibi" />
 
-<title> {{ .Title }} </title>
+<title>{{ .Title }}</title>
 
 {{ hugo.Generator }}
 
 <!-- CSS TAilwind -->
-{{ $styles := resources.Get "css/main.css" | postCSS }}
-
-{{ if .Site.IsServer }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}"/>
-{{ else }}
-  {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
+{{ $styles := resources.Get "css/main.css" | postCSS }} {{ if .Site.IsServer }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+{{ else }} {{ $styles := $styles | minify | fingerprint | resources.PostProcess
+}}
+<link
+  rel="stylesheet"
+  href="{{ $styles.RelPermalink }}"
+  integrity="{{ $styles.Data.Integrity }}"
+/>
 {{ end }}
 
-<link href="/css/syntax.css" rel="stylesheet">
+<link href="/css/syntax.css" rel="stylesheet" />
 
 {{ partial "_pwa.html" }}

@@ -1,41 +1,58 @@
 {{ define "main" }}
 
-<h3> {{ .Title }} </h3>
+<h3>{{ .Title }}</h3>
 
 <hr class="my-4" />
 
 <p>
-  My journey in writing format was here. I write more about programming and any other technologies and mostly with Indonesian language 🇮🇩. Enjoy reading 😉.
+  My journey in writing format was here. I write more about programming and any
+  other technologies and mostly with Indonesian language 🇮🇩. Enjoy reading 😉.
 </p>
 
-<br>
+<br />
 
-<div class="flex flex-col space-y-3 md:rounded-xl md:shadow-md md:border md:border-gray-200 md:p-4 md:w-11/12 md:mx-auto lg:px-6">
-
+<div
+  class="flex flex-col space-y-3 md:rounded-xl md:shadow-md md:border md:border-gray-200 md:p-4 md:w-11/12 md:mx-auto lg:px-6"
+>
   {{ range (.Site.RegularPages.GroupByDate "2006") }}
   <div class="flex flex-col space-y-2 mt-1 mb-2">
-
     <div class="flex flex-row items-center space-x-2 mb-2">
-      <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <svg
+        width="30"
+        height="30"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+        ></path>
+      </svg>
       <span class="text-2xl font-bold">{{ .Key }}</span>
     </div>
 
     <ul class="w-full ml-4 flex flex-col space-y-2 font-medium list-none">
-      
       {{ range where .Pages "Section" "blog"}}
       <li class="flex flex-row items-center content-center space-x-2">
-        <small class="flex-none text-gray-600 font-bold py-px px-2 bg-gray-100 rounded-md"><time>{{.Date.Format "Jan 02"}}</time></small>
-        <a class="flex-shrink text-blue-500 hover:text-purple-600" href="{{.Permalink}}">
+        <small
+          class="flex-none text-gray-600 font-bold py-px px-2 bg-gray-100 rounded-md"
+          ><time>{{.Date.Format "Jan 02"}}</time></small
+        >
+        <a
+          class="flex-shrink text-blue-500 hover:text-purple-600"
+          href="{{.Permalink}}"
+        >
           {{.Title}}
         </a>
       </li>
       {{ end }}
-
     </ul>
-
   </div>
   {{ end }}
-
 </div>
 
 {{ end }}

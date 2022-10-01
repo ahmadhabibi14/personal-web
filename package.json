@@ -1,13 +1,17 @@
 {
-  "name": "mygithubpages",
+  "name": "My Personal Web",
   "version": "1.0.0",
-  "description": "Habibi's Website build with Hugo",
+  "description": "Personal Web build with Hugo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadhabibi14/personal-web.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Ahmad Habibi",
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.3",

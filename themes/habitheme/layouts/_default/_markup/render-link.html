@@ -1,24 +1,10 @@
 {{ $isInsecure := true }} {{ if strings.HasPrefix .Destination "https" }} {{
 $isInsecure = false }} {{ end }}
-<a
-    href="{{ .Destination }}"
-    {{
-    with
-    .Title}}
-    title="{{ . }}"
-    {{
-    end
-    }}{{
-    if
-    $isInsecure
-    }}
-    target="_blank"
-    rel="noopener"
-    {{
-    end
-    }}
-    class="text-blue-500 hover:text-underline hover:text-purple-600 inline-flex flex-row items-center"
->
+<a href="{{ .Destination }}" {{ with .Title}} title="{{ . }}" {{ end }}
+    {{ if $isInsecure }} target="_blank" rel="noopener" {{ end }}
+    class="text-blue-500 hover:text-underline hover:text-purple-600
+            inline-flex flex-row items-center"
+    >
     <span>{{ .PlainText }}</span>
     <span>
         <svg

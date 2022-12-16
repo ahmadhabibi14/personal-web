@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Turbo progress bar */
+.turbo-progress-bar {
+  @apply bg-blue-500 h-1;
+}
+
 html::-webkit-scrollbar {
   width: 0.5rem;
 }

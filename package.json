@@ -4,7 +4,10 @@
   "description": "Personal Web build with Hugo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "hugo server --renderToDisk",
+    "draft": "hugo server -D --renderToDisk",
+    "tailwind:watch": "npx tailwindcss -i ./themes/habitheme/assets/css/main.css -o ./themes/habitheme/assets/css/main.tmp.css --watch",
+    "dev": "hugo server --disableFastRender --renderToDisk & npm run tailwind:watch && `fg`"
   },
   "repository": {
     "type": "git",
@@ -12,15 +15,21 @@
   },
   "keywords": [],
   "author": "Ahmad Habibi",
-  "license": "ISC",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/ahmadhabibi14/personal-web/issues"
+  },
+  "homepage": "https://github.com/ahmadhabibi14/personal-web#readme",
   "devDependencies": {
+    "@hotwired/turbo": "^7.1.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.3",
+    "alpinejs": "^3.10.5",
     "autoprefixer": "^10.4.7",
     "concurrently": "^7.2.0",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
-    "@hotwired/turbo": "^7.1.0",
-    "turbo": "^1.4.3",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "turbo": "^1.4.3"
   }
 }

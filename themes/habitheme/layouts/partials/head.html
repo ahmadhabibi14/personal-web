@@ -25,16 +25,31 @@
 {{ hugo.Generator }}
 
 <!-- CSS TAilwind -->
-{{ $styles := resources.Get "css/main.css" | postCSS }} {{ if .Site.IsServer }}
+{{ $styles := resources.Get "css/main.css" | postCSS }} {{ if site.IsServer }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
-{{ else }} {{ $styles := $styles | minify | fingerprint | resources.PostProcess
-}}
+<link rel="stylesheet" href="/css/main.tmp.css" />
+{{ else }} {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
 <link
   rel="stylesheet"
   href="{{ $styles.RelPermalink }}"
   integrity="{{ $styles.Data.Integrity }}"
 />
 {{ end }}
+
+<!-- JAVASCRIPT -->
+{{ $build_options := dict "targetPath" "js/script.js" }} {{ $js := resources.Get "js/script.js" | js.Build $build_options | minify }}
+<link
+  rel="preload"
+  href="{{ $js.RelPermalink }}"
+  as="script"
+  fetchPriority="high"
+/>
+<script
+  type="text/javascript"
+  src="{{ $js.RelPermalink }}"
+  data-turbo-track="reload"
+  defer
+></script>
 
 <link href="/css/syntax.css" rel="stylesheet" />
 

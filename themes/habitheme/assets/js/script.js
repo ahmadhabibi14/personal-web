@@ -1,5 +1,5 @@
-import * as Turbo from "@hotwired/turbo";
-import Alpine from "alpinejs";
+import * as Turbo from "/node_modules/@hotwired/turbo";
+import Alpine from "/node/modules/alpinejs";
 
 // Initalize Alpinejs
 window.Alpine = Alpine;

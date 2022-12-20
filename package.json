@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Personal Web build with Hugo",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "hugo server --renderToDisk",
     "draft": "hugo server -D --renderToDisk",

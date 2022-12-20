@@ -28,7 +28,7 @@
 {{ $styles := resources.Get "css/main.css" | postCSS }} {{ if site.IsServer }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 <link rel="stylesheet" href="/css/main.tmp.css" />
-{{ else }} {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+{{ else }} {{ $styles := $styles | minify | fingerprint }}
 <link
   rel="stylesheet"
   href="{{ $styles.RelPermalink }}"

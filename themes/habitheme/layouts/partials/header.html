@@ -1,65 +1,296 @@
-<header
-  class="h-16 bg-gray-900 fixed w-screen inset-0 border-b border-gray-700 text-gray-300"
->
-  <div
-    class="w-11/12 md:w-10/12 mx-auto flex flex-row content-center items-center space-x-4 content-stretch h-full justify-between"
-  >
+<header class="navbar" x-data="{ openMenu: false }">
+  <div class="navbarDesktop">
     <a href="{{ .Site.BaseURL }}">
-      <!--<svg
-        class="w-10 group"
-        viewBox="0 0 297 280"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          class="fill-none stroke-emerald-500 group-hover:fill-gray-300/10"
-          x="10"
-          y="10"
-          width="277"
-          height="260"
-          rx="70"
-          stroke-width="20"
-        />
-        <path
-          class="fill-emerald-400"
-          d="M142.958 115.621C146.091 110.611 153.389 110.611 156.523 115.621L175.858 146.535C179.191 151.863 175.36 158.777 169.076 158.777H130.405C124.12 158.777 120.29 151.863 123.622 146.535L142.958 115.621Z"
-        />
-        <path
-          class="fill-emerald-400"
-          d="M77.7402 76.7772C77.7402 68.493 84.456 61.7772 92.7402 61.7772V61.7772C101.025 61.7772 107.74 68.493 107.74 76.7772V202.777C107.74 211.061 101.025 217.777 92.7402 217.777V217.777C84.456 217.777 77.7402 211.061 77.7402 202.777V76.7772Z"
-        />
-        <path
-          class="fill-emerald-400"
-          d="M192.74 76.7772C192.74 68.493 199.456 61.7772 207.74 61.7772V61.7772C216.025 61.7772 222.74 68.493 222.74 76.7772V202.777C222.74 211.061 216.025 217.777 207.74 217.777V217.777C199.456 217.777 192.74 211.061 192.74 202.777V76.7772Z"
-        />
-      </svg>-->
-      <svg
-        class="w-10 fill-none group"
-        viewBox="0 0 309 323"
-      >
+      <svg class="w-10 fill-none group" viewBox="0 0 309 323">
         <path
           class="stroke-[29px] stroke-emerald-500 group-hover:stroke-emerald-400"
-          d="M139.794 19.2706C148.926 14.1351 160.074 14.1351 169.206 19.2706L273.007 77.6486C282.454 82.9618 288.301 92.9579 288.301 103.797V219.203C288.301 230.042 282.454 240.038 273.007 245.351L169.206 303.729C160.074 308.865 148.926 308.865 139.794 303.729L35.9932 245.351C26.5458 240.038 20.6991 230.042 20.6991 219.203V103.797C20.6991 92.9579 26.5458 82.9618 35.9932 77.6486L139.794 19.2706Z"
+          d="M139.794 19.2706C148.926 14.1351 160.07414.1351 169.206 19.2706L273.007
+            77.6486C282.454 82.9618 288.301 92.9579 288.301 103.797V219.203C288.301
+            230.042 282.454 240.038 273.007 245.351L169.206 303.729C160.074 308.865
+            148.926 308.865 139.794 303.729L35.9932 245.351C26.5458 240.038 20.6991 230.042 20.6991
+            219.203V103.797C20.6991 92.9579 26.5458 82.9618 35.9932 77.6486L139.794 19.2706Z"
         />
         <path
           class="fill-emerald-500 group-hover:fill-emerald-400"
-          d="M91 47.5C91 39.4919 97.4919 33 105.5 33V33C113.508 33 120 39.4919 120 47.5L120 199.5C120 207.508 113.508 214 105.5 214V214C97.4919 214 91 207.508 91 199.5L91 47.5Z"
+          d="M91 47.5C91 39.4919 97.4919 33 105.5 33V33C113.508 33 120 39.4919 120 47.5L120
+            199.5C120 207.508 113.508 214 105.5 214V214C97.4919 214 91 207.508 91 199.5L91 47.5Z"
         />
         <path
           class="fill-emerald-500 group-hover:fill-emerald-400"
-          d="M105.5 176C97.4919 176 91 169.508 91 161.5V161.5C91 153.492 97.4919 147 105.5 147H204.5C212.508 147 219 153.492 219 161.5V161.5C219 169.508 212.508 176 204.5 176H105.5Z"
+          d="M105.5 176C97.4919 176 91 169.508 91 161.5V161.5C91 153.492 97.4919 147 105.5
+            147H204.5C212.508 147 219 153.492 219 161.5V161.5C219 169.508 212.508 176 204.5 176H105.5Z"
         />
         <path
           class="fill-emerald-500 group-hover:fill-emerald-400"
-          d="M190 124.5C190 116.492 196.492 110 204.5 110V110C212.508 110 219 116.492 219 124.5L219 274.5C219 282.508 212.508 289 204.5 289V289C196.492 289 190 282.508 190 274.5L190 124.5Z"
+          d="M190 124.5C190 116.492 196.492 110 204.5 110V110C212.508 110 219 116.492 219 124.5L219
+            274.5C219 282.508 212.508 289 204.5 289V289C196.492 289 190 282.508 190 274.5L190 124.5Z"
         />
       </svg>
     </a>
-    <span class="w-px bg-gray-400 h-6 md:flex hidden"> </span>
-    <nav class="items-center justify-between w-full md:flex hidden">
-      <div class="flex flex-row space-x-8 text-base font-medium list-none">
+    <span class="navSeparator"></span>
+    <nav class="navList">
+      <div class="navListMenu">
+        <a class="navMenuBtn" href="{{ .Site.BaseURL }}">
+          <svg
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            ></path>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a class="navMenuBtn" href="/about">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>About</span>
+        </a>
+        <a class="navMenuBtn" href="/project">
+          <svg
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+          <span>Projects</span>
+        </a>
+        <a class="navMenuBtn" href="/contact">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            ></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Contact</span>
+        </a>
+        <a class="navMenuBtn" href="/blog">
+          <svg
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+            ></path>
+          </svg>
+          <span>Blog</span>
+        </a>
+      </div>
+      <div class="flex flex-row font-semibold">
+        <button
+          @click="darkMode = !darkMode"
+          class="group border-emerald-500 text-emerald-500 hover:bg-emerald-500/20 inline-flex text-sm py-1.5 px-3 border-2 flex-row items-center rounded-xl"
+        >
+          <!-- MOON Icon-->
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-[20px] h-[20px] block dark:hidden"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
+              class="group-hover:fill-emerald-500"
+            ></path>
+            <path
+              d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
+              class="fill-emerald-500"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
+              class="fill-emerald-500"
+            ></path>
+          </svg>
+
+          <!-- SUN Icon -->
+          <svg
+            class="fill-none stroke-emerald-500 hidden dark:block group"
+            viewBox="0 0 24 24"
+            width="17"
+            height="17"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="5"
+              class="group-hover:fill-emerald-500"
+            />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+
+          <span class="ml-1.5" x-text="darkMode ? 'Light' : 'Dark'"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- BAR when responsive -->
+    <label @click="openMenu = !openMenu" class="flex md:hidden">
+      <svg
+        class="fill-emerald-500 stroke-none"
+        width="30"
+        height="25"
+        viewBox="0 0 24 20"
+      >
+        <g transform="matrix(-1,0,0,1,23.197645,0)">
+          <rect
+            paint-order="stroke fill markers"
+            stroke-dasharray="none"
+            stroke-linejoin="round"
+            stroke-width="24.0788"
+            width="17.213737"
+            height="2.5733373"
+            x="0.80000001"
+            y="1.1929638"
+            ry="1.2866687"
+          />
+          <rect
+            paint-order="stroke fill markers"
+            stroke-dasharray="none"
+            stroke-linejoin="round"
+            stroke-width="24.0788"
+            width="17.213737"
+            height="2.5733373"
+            x="0.80000001"
+            y="15.928909"
+            ry="1.2866687"
+          />
+          <rect
+            paint-order="stroke fill markers"
+            stroke-dasharray="none"
+            stroke-linejoin="round"
+            stroke-width="24.0788"
+            width="21.597645"
+            height="2.5733373"
+            x="0.80000001"
+            y="8.4741688"
+            ry="1.2866687"
+          />
+        </g>
+      </svg>
+    </label>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <aside
+    x-show="openMenu"
+    class="fixed h-screen w-full inset-0 bg-gray-500/20 dark:bg-gray-400/20 z-50"
+    @click.self="openMenu = false"
+    style="display: none"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:leave="transition ease-in duration-300"
+  >
+    <div
+      class="relative flex flex-col py-5 px-6 w-9/12 bg-white dark:bg-gray-900 h-full rounded-r-xl"
+      x-show="openMenu"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="-translate-x-full"
+      x-transition:enter-end="translate-x-0"
+      x-transition:leave="transition ease-in duration-300"
+      x-transition:leave-start="translate-x-0"
+      x-transition:leave-end="-translate-x-full"
+    >
+      <header class="flex flex-row justify-between">
+        <a href="{{ .Site.BaseURL }}">
+          <svg class="w-10 fill-none group" viewBox="0 0 309 323">
+            <path
+              class="stroke-[29px] stroke-emerald-500 group-hover:stroke-emerald-400"
+              d="M139.794 19.2706C148.926 14.1351 160.074 14.1351 169.206 19.2706L273.007 77.6486C282.454
+               82.9618 288.301 92.9579 288.301 103.797V219.203C288.301 230.042 282.454 240.038
+               273.007 245.351L169.206 303.729C160.074 308.865 148.926 308.865 139.794
+               303.729L35.9932 245.351C26.5458 240.038 20.6991 230.042 20.6991
+               219.203V103.797C20.6991 92.9579 26.5458 82.9618 35.9932 77.6486L139.794 19.2706Z"
+            />
+            <path
+              class="fill-emerald-500 group-hover:fill-emerald-400"
+              d="M91 47.5C91 39.4919 97.4919 33 105.5 33V33C113.508 33 120 39.4919 120 47.5L120
+               199.5C120 207.508 113.508 214 105.5 214V214C97.4919 214 91 207.508 91 199.5L91 47.5Z"
+            />
+            <path
+              class="fill-emerald-500 group-hover:fill-emerald-400"
+              d="M105.5 176C97.4919 176 91 169.508 91 161.5V161.5C91 153.492 97.4919 147 105.5
+               147H204.5C212.508 147 219 153.492 219 161.5V161.5C219 169.508 212.508 176 204.5 176H105.5Z"
+            />
+            <path
+              class="fill-emerald-500 group-hover:fill-emerald-400"
+              d="M190 124.5C190 116.492 196.492 110 204.5 110V110C212.508 110 219 116.492 219
+               124.5L219 274.5C219 282.508 212.508 289 204.5 289V289C196.492 289 190 282.508 190 274.5L190 124.5Z"
+            />
+          </svg>
+        </a>
+        <button type="button" @click="openMenu = false" class="group">
+          <svg
+            class="fill-none stroke-emerald-500 group-hover:stroke-rose-600"
+            viewBox="0 0 24 24"
+            height="40"
+            width="40"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <div class="flex flex-col space-y-6 text-base font-medium list-none mt-9 text-gray-900 dark:text-gray-300">
         <a
-          class="hover:text-emerald-400 inline-flex flex-row items-center space-x-1.5"
+          @click="openMenu = false"
+          class="navMenuBtn w-fit"
           href="{{ .Site.BaseURL }}"
         >
           <svg
@@ -79,12 +310,8 @@
           </svg>
           <span>Home</span>
         </a>
-        <a
-          class="hover:text-emerald-400 inline-flex flex-row items-center space-x-1.5"
-          href="/about"
-        >
+        <a @click="openMenu = false" class="navMenuBtn w-fit" href="/about">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
             viewBox="0 0 24 24"
@@ -99,17 +326,13 @@
           </svg>
           <span>About</span>
         </a>
-        <a
-          class="hover:text-emerald-400 inline-flex flex-row items-center space-x-1.5"
-          href="/project"
-        >
+        <a @click="openMenu = false" class="navMenuBtn w-fit" href="/project">
           <svg
             width="20"
             height="20"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               stroke-linecap="round"
@@ -118,14 +341,10 @@
               d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
             ></path>
           </svg>
-          <span>Project</span>
+          <span>Projects</span>
         </a>
-        <a
-          class="hover:text-emerald-400 inline-flex flex-row items-center space-x-1.5"
-          href="/contact"
-        >
+        <a @click="openMenu = false" class="navMenuBtn w-fit" href="/contact">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
             viewBox="0 0 24 24"
@@ -142,17 +361,13 @@
           </svg>
           <span>Contact</span>
         </a>
-        <a
-          class="hover:text-emerald-400 inline-flex flex-row items-center space-x-1.5"
-          href="/blog"
-        >
+        <a @click="openMenu = false" class="navMenuBtn w-fit" href="/blog">
           <svg
             width="22"
             height="22"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               stroke-linecap="round"
@@ -163,201 +378,82 @@
           </svg>
           <span>Blog</span>
         </a>
-      </div>
-      <div class="flex flex-row space-x-4">
-        <a
-          class="py-1.5 px-3 border-2 border-emerald-600 bg-emerald-500 text-sm flex flex-row items-center hover:bg-emerald-400 rounded-md text-gray-50"
-          href="https://saweria.co/ahmadhabibi14"
-          title="Buy me a coffee"
-          target="_blank"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+        <div class="flex flex-row pt-3 space-x-4">
+          <a
+            @click="openMenu = false"
+            href="/about"
+            class="group text-rose-600 border-2 border-rose-600 hover:bg-rose-500/20 inline-flex text-xs py-1 px-2.5 flex-row items-center rounded-xl"
           >
-            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-            <line x1="6" y1="1" x2="6" y2="4"></line>
-            <line x1="10" y1="1" x2="10" y2="4"></line>
-            <line x1="14" y1="1" x2="14" y2="4"></line>
-          </svg>
-          <span class="ml-1.5"> Buy me a coffee </span>
-        </a>
-      </div>
-    </nav>
+            <svg
+              class="group-hover:fill-rose-600 fill-none stroke-rose-600 w-[20px] h-[20px"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            <span class="ml-1.5">Support</span>
+          </a>
+          <button
+            @click="darkMode = !darkMode"
+            class="group border-emerald-500 text-emerald-500 hover:bg-emerald-500/20 inline-flex text-xs py-1 px-2.5 border-2 flex-row items-center rounded-xl"
+          >
+            <!-- MOON Icon-->
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              class="w-[20px] h-[20px] block dark:hidden"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
+                class="group-hover:fill-emerald-500"
+              ></path>
+              <path
+                d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
+                class="fill-emerald-500"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
+                class="fill-emerald-500"
+              ></path>
+            </svg>
 
-    <!-- BAR when responsive -->
-    <label class="flex md:hidden text-2xl text-gray-600 hamburger">
-      <img
-        src="/icons/menu.svg"
-        width="35"
-        height="35"
-        alt="menu button"
-        id="icons"
-      />
-    </label>
-  </div>
+            <!-- SUN Icon -->
+            <svg
+              class="fill-none stroke-emerald-500 hidden dark:block group"
+              viewBox="0 0 24 24"
+              width="17"
+              height="17"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="5"
+                class="group-hover:fill-emerald-500"
+              />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <span class="ml-1.5" x-text="darkMode ? 'Light' : 'Dark'"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
 </header>
-<div
-  class="bg-white bg-opacity-75 backdrop-blur top-16 md:hidden flex-col text-center space-y-6 h-full w-full pt-8 px-14 sm:px-32 fixed z-50 text-xl font-medium menu-res hidden"
->
-  <a
-    class="hover:text-blue-500 inline-flex items-center flex-row space-x-1.5"
-    href="{{ .Site.BaseURL }}"
-  >
-    <svg
-      width="21"
-      height="21"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-      ></path>
-    </svg>
-    <span>Home</span>
-  </a>
-  <a
-    class="hover:text-blue-500 inline-flex flex-row items-center space-x-1.5"
-    href="/about"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-      <circle cx="12" cy="7" r="4"></circle>
-    </svg>
-    <span>About</span>
-  </a>
-  <a
-    class="hover:text-blue-500 inline-flex flex-row items-center space-x-1.5"
-    href="/project"
-  >
-    <svg
-      width="20"
-      height="20"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-      ></path>
-    </svg>
-    <span>Project</span>
-  </a>
-  <a
-    class="hover:text-blue-500 inline-flex flex-row items-center space-x-1.5"
-    href="/contact"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path
-        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-      ></path>
-      <polyline points="22,6 12,13 2,6"></polyline>
-    </svg>
-    <span>Contact</span>
-  </a>
-  <a
-    class="hover:text-blue-500 inline-flex flex-row items-center space-x-1.5"
-    href="/blog"
-  >
-    <svg
-      width="22"
-      height="22"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-      ></path>
-    </svg>
-    <span>Blog</span>
-  </a>
-  <a
-    class="hover:text-blue-500 inline-flex flex-row items-center space-x-1.5"
-    href="https://saweria.co/ahmadhabibi14"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-      <line x1="6" y1="1" x2="6" y2="4"></line>
-      <line x1="10" y1="1" x2="10" y2="4"></line>
-      <line x1="14" y1="1" x2="14" y2="4"></line>
-    </svg>
-    <span>Buy me a coffee</span>
-  </a>
-  <a
-    class="hover:text-blue-500 inline-flex flex-row items-center space-x-1.5"
-    href="https://github.com/ahmadhabibi14/personal-web"
-    title="Source code"
-    target="_blank"
-  >
-    <svg
-      width="20"
-      height="20"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-      />
-    </svg>
-    <span>Source Code</span>
-  </a>
-</div>

@@ -1,21 +1,38 @@
 <footer
-  class="w-full border-t border-gray-200"
+  class="w-full border-t border-gray-200 dark:border-gray-700"
   x-data="{ year: '' }"
   x-init="year = new Date().getFullYear()"
 >
   <div
-    class="w-10/12 mx-auto py-4 content-center items-center text-gray-600 flex flex-col md:flex-row justify-center md:justify-between font-medium text-base"
+    class="w-10/12 mx-auto py-4 content-center items-center flex flex-col md:flex-row justify-center text-center font-medium text-base"
   >
-    <p>
+    <p class="md:basis-1/3">
       Copyright &copy;
       <span x-text="year"></span>
-      •
-      <a href="{{ .Site.BaseURL }}" class="hover:text-blue-500">Ahmad Habibi</a>
     </p>
-    <p>
-      Made with ❤ using
-      <a href="https://gohugo.io" target="_blank" class="hover:text-blue-500"
-        >Hugo v0.101.0</a
+    <div class="md:basis-1/3 hidden md:block">
+      <a
+        href="/about"
+        class="w-fit group text-rose-600 border-2 border-rose-600 hover:bg-rose-500/20 inline-flex text-xs py-1 px-2.5 flex-row items-center rounded-xl"
+      >
+        <svg
+          class="group-hover:fill-rose-600 fill-none stroke-rose-600 w-[20px] h-[20px"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
+        <span class="ml-1.5">Support</span>
+      </a>
+    </div>
+    <p class="md:basis-1/3">
+      Made with ❤ by
+      <a href="{{ .Site.BaseURL }}" class="hover:text-emerald-500"
+        >Ahmad Habibi</a
       >
     </p>
   </div>

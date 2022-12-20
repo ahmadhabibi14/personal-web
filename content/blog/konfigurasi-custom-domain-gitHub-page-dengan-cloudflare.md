@@ -7,15 +7,11 @@ lang: id
 
 Halaman Github (Github Pages) merupakan layanan hosting web statis yang diberikan oleh Github. Layanan ini diberikan secara gratis dan kita juga akan mendapatkan subdomain **.github.io**. Lalu bagaimana dengan yang kustom domain atau domain sendiri?. Untuk mendapatkan SSL, kita dapat menggunakan layanan SSL gratis dari Cloudflare. Sebelum mengkonfigurasi nya, siapkan hal – hal berikut :
 
-* **PC atau Laptop**
-* **Sambungan Internet**
-* **Github pages**
-* **Domain**
-
-	Pastikan anda sudah mempunyai domain, silahkan beli dulu
-* **Kopi, dan Snack**
-
-	Biar semangat, sediakan kopi dan makanan ringan
+- **PC atau Laptop**
+- **Sambungan Internet**
+- **Github pages**
+- **Domain** [ Pastikan anda sudah mempunyai domain, silahkan beli dulu ]
+- **Kopi, dan Snack** [ Biar semangat, sediakan kopi dan makanan ringan ]
 
 ### **Konfigurasi custom domain ke Github page**
 

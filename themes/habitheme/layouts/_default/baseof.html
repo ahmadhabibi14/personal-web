@@ -1,33 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html
+  lang="en"
+  x-data="{ darkMode: localStorage.getItem('dark') === 'true'}"
+  x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+  :class="{ 'dark': darkMode }"
+>
+  <head>
     {{- partial "head.html" . -}}
-</head>
-<body class="text-gray-700">
+  </head>
+  <body class="body">
     {{- partial "header.html" . -}}
-    <main class="w-11/12 md:w-8/12 mx-auto mt-24 mb-8">
-    {{- block "main" . }}{{- end }}
+    <main class="main">
+      {{- block "main" . }}{{- end }}
     </main>
     {{- partial "footer.html" . -}}
-    <script type="text/javascript" src="/js/script.js"></script>
-    <script type="text/javascript">
-        // Grab HTML Elements
-        const btn = document.querySelector(".hamburger");
-        const menu = document.querySelector(".menu-res");
-        let icons = document.getElementById('icons');
-        let isActive = false;
-
-        // Add Event Listeners
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-            if(!isActive) {
-                icons.src = "/icons/close.svg";
-                isActive = true
-            } else {
-                icons.src = "/icons/menu.svg";
-                isActive = false
-            }
-        });
-    </script>
-</body>
+  </body>
 </html>

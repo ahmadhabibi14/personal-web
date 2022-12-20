@@ -1,81 +1,82 @@
 {{ define "main" }}
 
-<h3>{{ .Title }}</h3>
-
-<hr class="my-4" />
-
-<div>{{ .Content }}</div>
-<blockquote class="text-base">
-    <q> Don't be a Programmer, be a Problem Solver </q>
-</blockquote>
-
-<br />
-<hr />
-<br />
-
-<div
+<article class="article">
+  <h1 class="text-emerald-500">{{ .Title }}</h1>
+  <hr />
+  <div>{{ .Content }}</div>
+  <blockquote>
+    Don't be a Programmer, be a Problem Solver
+  </blockquote>
+  <hr />
+  <div
     class="flex flex-wrap flex-row justify-center items-stretch content-stretch"
->
+  >
     {{ range .Site.Data.projects }}
-    <div
-        class="w-full sm:w-5/12 flex flex-no-wrap flex-col justify-between border border-gray-300 shadow-md px-10 py-8 h-auto rounded-xl md:m-3 mb-3"
+    <figure
+      class="w-full sm:w-5/12 flex flex-no-wrap flex-col justify-between border border-gray-300 dark:border-gray-700 shadow-md px-5 md:px-10 py-5 md:py-8 h-auto rounded-xl md:m-3 mb-3"
     >
-        <div class="flex flex-col space-y-2 mb-5">
-            <p class="font-bold text-lg">{{ .name }}</p>
-            <hr />
-            <p>{{ .description }}</p>
-        </div>
+      <div class="flex flex-col space-y-2 mb-5">
+        <figcaption
+          class="font-bold text-lg pb-2 mb-2 border-b-[2px] border-emerald-500 border-dashed"
+        >
+          {{ .name }}
+        </figcaption>
+        <p>{{ .description }}</p>
+      </div>
+      <div
+        class="flex flex-row justify-end space-x-2 items-center content-center font-medium"
+      >
+        <a
+          class="cursor-pointer text-sm py-1.5 px-3 border-[2px] shadow border-amber-500 text-amber-500 hover:bg-amber-500/20 hover:border-amber-400 hover:text-amber-400 rounded-xl flex flex-row items-center space-x-1"
+          href="{{ .source }}"
+          target="_blank"
+        >
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+            />
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+            <line x1="12" y1="22.08" x2="12" y2="12" />
+          </svg>
 
-        <div class="flex flex-row justify-end space-x-2">
-            <a
-                class="hover:text-blue-500"
-                href="{{ .source }}"
-                title="Source code"
-                target="_blank"
-            >
-                <svg
-                    width="26"
-                    height="26"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                    />
-                </svg>
-            </a>
-            <a
-                href="{{ .view }}"
-                class="hover:text-blue-500"
-                title="View"
-                target="_blank"
-            >
-                <svg
-                    width="26"
-                    height="26"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                </svg>
-            </a>
-        </div>
-    </div>
+          <span>Source</span>
+        </a>
+        <a
+          href="{{ .view }}"
+          class="cursor-pointer text-sm py-1.5 px-3 border-[2px] shadow border-blue-500 text-blue-500 hover:bg-blue-500/20 hover:border-blue-400 hover:text-blue-400 rounded-xl flex flex-row items-center space-x-1"
+          target="_blank"
+        >
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <polygon
+              points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+            />
+          </svg>
+          <span>View</span>
+        </a>
+      </div>
+    </figure>
     {{ end }}
-</div>
+  </div>
+</article>
 
 {{ end }}

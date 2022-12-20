@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./themes/habitheme/layouts/**/*.html"],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -7,5 +8,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

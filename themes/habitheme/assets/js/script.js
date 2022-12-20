@@ -1,4 +1,4 @@
-import * as Turbo from "../../../../node_modules/@hotwired/turbo";
+import * as Turbo from "@hotwired/turbo";
 import Alpine from "alpinejs";
 
 // Initalize Alpinejs

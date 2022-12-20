@@ -37,7 +37,7 @@
 {{ end }}
 
 <!-- JAVASCRIPT -->
-{{ $build_options := dict "targetPath" "js/script.js" }} {{ $js := resources.Get "js/script.js" | js.Build $build_options | minify }}
+<!-- {{ $build_options := dict "targetPath" "js/script.js" }} {{ $js := resources.Get "js/script.js" | js.Build $build_options | minify }}
 <link
   rel="preload"
   href="{{ $js.RelPermalink }}"
@@ -50,7 +50,18 @@
   integrity="{{ $js.Data.Integrity }}"
   data-turbo-track="reload"
   defer
-></script>
+></script> -->
+<link
+  rel=preload
+  href=/js/script.min.js
+  as=script
+  fetchpriority=high>
+<script 
+  type=text/javascript 
+  src=/js/script.min.js 
+  integrity data-turbo-track=reload
+  defer>
+</script>
 
 <link href="/css/syntax.css" rel="stylesheet" />
 

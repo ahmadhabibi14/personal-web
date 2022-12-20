@@ -36,21 +36,6 @@
 />
 {{ end }}
 
-<!-- JAVASCRIPT -->
-<!-- {{ $build_options := dict "targetPath" "js/script.js" }} {{ $js := resources.Get "js/script.js" | js.Build $build_options | minify }}
-<link
-  rel="preload"
-  href="{{ $js.RelPermalink }}"
-  as="script"
-  fetchPriority="high"
-/>
-<script
-  type="text/javascript"
-  src="{{ $js.RelPermalink }}"
-  integrity="{{ $js.Data.Integrity }}"
-  data-turbo-track="reload"
-  defer
-></script> -->
 <link
   rel=preload
   href=/js/script.min.js

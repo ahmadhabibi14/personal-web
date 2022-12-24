@@ -6,19 +6,16 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 <meta name="author" content="Ahmad Habibi" />
 <meta
-  name="keywords"
-  content="Blog, Tech, JavaScript, Static Site Generator, Linux, HTML, CSS, Personal Web, Portofolio"
+  name="description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}"
 />
-<meta
-  name="google-site-verification"
-  content="L5chh5oVhWYYp1IqtLhmsiMPhS5k-FSFng2yl7F-F2s"
-/>
-<meta name="description" content="Blog and Resume for Ahmad Habibi" />
-<meta property="og:image" content="/images/HBBIII-og.png" />
-<meta property="og:image:secure_url" content="" />
-<meta property="og:image:width" content="1300" />
-<meta property="og:image:height" content="700" />
-<meta property="og:image:alt" content="{{ .Title }}" />
+<meta content="index,follow" name="robots" />
+<meta property="fb:pages" content="ahmadhabibi7159" />
+<meta name="telegram" content="@ahmadhabibi14" />
+<meta content="{{ .Site.Copyright }}" name="copyright" />
+
+{{ partial "_opengraph.html" . }}
+{{ partial "_pwa.html" }}
 
 <title>{{ .Title }}</title>
 
@@ -38,16 +35,14 @@
 
 <link
   rel=preload
-  href=/js/script.min.js
+  href=/js/alpine.js
   as=script
   fetchpriority=high>
 <script 
   type=text/javascript 
-  src=/js/script.min.js 
+  src=/js/alpine.js 
   integrity data-turbo-track=reload
   defer>
 </script>
 
 <link href="/css/syntax.css" rel="stylesheet" />
-
-{{ partial "_pwa.html" }}

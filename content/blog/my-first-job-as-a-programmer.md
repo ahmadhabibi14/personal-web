@@ -3,6 +3,8 @@ title: "First Job as A Freelance Programmer, How I get it ?"
 draft: false
 date: 2022-09-09T21:40:34+08:00
 lang: en
+
+image: /img/default-post-cover.png
 ---
 
 {{< images src="/images/first-job/images.png" alt="images" >}}

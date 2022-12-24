@@ -27,7 +27,7 @@
         class="flex flex-row justify-end space-x-2 items-center content-center font-medium"
       >
         <a
-          class="cursor-pointer text-sm py-1.5 px-3 border-[2px] shadow border-amber-500 text-amber-500 hover:bg-amber-500/20 hover:border-amber-400 hover:text-amber-400 rounded-xl flex flex-row items-center space-x-1"
+          class="group cursor-pointer text-sm py-1.5 px-3 border-[2px] shadow border-amber-500 text-amber-500 hover:bg-amber-500/20 hover:border-amber-400 hover:text-amber-400 rounded-xl flex flex-row items-center space-x-1"
           href="{{ .source }}"
           target="_blank"
         >
@@ -35,13 +35,12 @@
             width="15"
             height="15"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
+            class="fill-none stroke-current group-hover:fill-amber-500 group-hover:stroke-amber-700"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />
+            <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/>
             <path
               d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
             />
@@ -53,15 +52,14 @@
         </a>
         <a
           href="{{ .view }}"
-          class="cursor-pointer text-sm py-1.5 px-3 border-[2px] shadow border-blue-500 text-blue-500 hover:bg-blue-500/20 hover:border-blue-400 hover:text-blue-400 rounded-xl flex flex-row items-center space-x-1"
+          class="group cursor-pointer text-sm py-1.5 px-3 border-[2px] shadow border-blue-500 text-blue-500 hover:bg-blue-500/20 hover:border-blue-400 hover:text-blue-400 rounded-xl flex flex-row items-center space-x-1"
           target="_blank"
         >
           <svg
+            class="fill-none stroke-current group-hover:stroke-blue-700 group-hover:fill-blue-400"
             width="15"
             height="15"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
             stroke-width="2.5"
             stroke-linecap="round"
             stroke-linejoin="round"

@@ -16,14 +16,15 @@
             <br/>
          </article>
          
-         <div class="flex justify-between flex-col lg:flex-row lg:space-x-4">
+         <div class="flex justify-between flex-col lg:flex-row lg:space-x-6">
             <!-- Send Message -->
             <form
                id="myForm"
-               class="text-base flex flex-col justify-start space-y-4 w-full lg:w-8/12 border border-gray-300 dark:border-gray-700 shadow-md rounded-xl p-6 lg:p-8"
+               class="text-base flex flex-col justify-start space-y-4 w-full lg:w-8/12 p-0"
                >
                <div class="flex flex-col lg:flex-row lg:space-x-3">
                   <input
+                     autocomplete="off"
                      type="name"
                      name="name"
                      class="mb-4 lg:mb-0 lg:w-1/2 caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
@@ -31,6 +32,7 @@
                      placeholder="Your Name"
                   />
                   <input
+                     autocomplete="email"
                      type="email"
                      name="email"
                      class="lg:w-1/2 caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
@@ -39,6 +41,7 @@
                   />
                </div>
                <input
+                  autocomplete="off"
                   type="subject"
                   name="subject"
                   class="caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
@@ -54,7 +57,7 @@
                ></textarea>
                <button
                   type="submit"
-                  class="font-bold group w-fit border-emerald-500 bg-emerald-600 text-gray-300 hover:bg-emerald-500 inline-flex text-sm py-2 px-4 border-[2px] flex-row items-center rounded-xl"
+                  class="font-bold group w-fit border-emerald-400 bg-emerald-500 text-gray-300 hover:bg-emerald-600 inline-flex text-sm py-2 px-4 border-[2px] flex-row items-center rounded-xl"
                >
                   <svg
                      class="fill-none stroke-current group-hover:fill-gray-300"

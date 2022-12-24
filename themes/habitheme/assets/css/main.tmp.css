@@ -958,6 +958,11 @@ q {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-emerald-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(52 211 153 / var(--tw-border-opacity));
+}
+
 .border-amber-500 {
   --tw-border-opacity: 1;
   border-color: rgb(245 158 11 / var(--tw-border-opacity));
@@ -978,9 +983,9 @@ q {
   border-color: rgb(225 29 72 / var(--tw-border-opacity));
 }
 
-.bg-emerald-600 {
+.bg-emerald-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 
 .bg-gray-100 {
@@ -1029,8 +1034,8 @@ q {
   padding: 0.75rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
+.p-0 {
+  padding: 0px;
 }
 
 .p-8 {
@@ -1183,14 +1188,14 @@ q {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
 .text-amber-500 {
   --tw-text-opacity: 1;
   color: rgb(245 158 11 / var(--tw-text-opacity));
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .text-gray-700 {
@@ -1751,9 +1756,9 @@ html {
   border-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
 
-.hover\:bg-emerald-500:hover {
+.hover\:bg-emerald-600:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-amber-500\/20:hover {
@@ -1777,9 +1782,9 @@ html {
   color: rgb(52 211 153 / var(--tw-text-opacity));
 }
 
-.hover\:text-purple-600:hover {
+.hover\:text-emerald-600:hover {
   --tw-text-opacity: 1;
-  color: rgb(147 51 234 / var(--tw-text-opacity));
+  color: rgb(5 150 105 / var(--tw-text-opacity));
 }
 
 .hover\:text-amber-400:hover {
@@ -1805,6 +1810,14 @@ html {
   fill: #d1d5db;
 }
 
+.group:hover .group-hover\:fill-amber-500 {
+  fill: #f59e0b;
+}
+
+.group:hover .group-hover\:fill-blue-400 {
+  fill: #60a5fa;
+}
+
 .group:hover .group-hover\:fill-rose-600 {
   fill: #e11d48;
 }
@@ -1815,6 +1828,14 @@ html {
 
 .group:hover .group-hover\:fill-emerald-500 {
   fill: #10b981;
+}
+
+.group:hover .group-hover\:stroke-amber-700 {
+  stroke: #b45309;
+}
+
+.group:hover .group-hover\:stroke-blue-700 {
+  stroke: #1d4ed8;
 }
 
 .group:hover .group-hover\:stroke-emerald-400 {
@@ -1997,20 +2018,16 @@ html {
     flex-direction: row;
   }
 
-  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  .lg\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
-    margin-right: calc(1rem * var(--tw-space-x-reverse));
-    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:p-8 {
-    padding: 2rem;
   }
 
   .lg\:px-6 {

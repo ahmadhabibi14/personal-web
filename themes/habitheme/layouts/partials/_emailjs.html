@@ -1,18 +1,36 @@
 <script
-    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
 ></script>
 
 <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
 ></script>
 
 <script type="text/javascript">
-    (function () {
-        emailjs.init("user_YZqd2C9w9VfIre9jaUg08");
-    })();
-</script>
+  (function () {
+    emailjs.init("user_YZqd2C9w9VfIre9jaUg08");
+  })();
 
-<script type="text/javascript" src="/js/api-gmail.js"></script>
+  // listen to the form submission
+  document
+    .getElementById("myForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const serviceID = "service_sdscf8n";
+      const templateID = "template_3jsgec3";
+
+      // send the email here
+      emailjs.sendForm(serviceID, templateID, this).then(
+        (response) => {
+          alert("Email sent 😎️👌️, now wait for further response from me");
+        },
+        (error) => {
+          alert("Failed to send Email, you're dumb 💩️", error);
+        }
+      );
+    });
+</script>

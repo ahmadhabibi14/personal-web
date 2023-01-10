@@ -1173,10 +1173,6 @@ q {
   font-weight: 600;
 }
 
-.leading-5 {
-  line-height: 1.25rem;
-}
-
 .leading-tight {
   line-height: 1.25;
 }
@@ -1897,10 +1893,6 @@ html {
 }
 
 @media (min-width: 640px) {
-  .sm\:hidden {
-    display: none;
-  }
-
   .sm\:w-5\/12 {
     width: 41.666667%;
   }
@@ -1952,12 +1944,6 @@ html {
     justify-content: space-around;
   }
 
-  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
   .md\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1995,17 +1981,13 @@ html {
     padding-top: 2rem;
   }
 
-  .md\:text-\[45px\] {
-    font-size: 45px;
+  .md\:text-\[43px\] {
+    font-size: 43px;
   }
 
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[43px\] {
-    font-size: 43px;
   }
 
   .md\:shadow-md {

@@ -925,6 +925,9 @@ q {
 .font-semibold {
   font-weight: 600;
 }
+.leading-tight {
+  line-height: 1.25;
+}
 .text-emerald-500 {
   --tw-text-opacity: 1;
   color: rgb(16 185 129 / var(--tw-text-opacity));
@@ -1581,10 +1584,10 @@ html {
   .md\:justify-around {
     justify-content: space-around;
   }
-  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  .md\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
   }
   .md\:rounded-xl {
     border-radius: 0.75rem;
@@ -1610,8 +1613,8 @@ html {
   .md\:pt-8 {
     padding-top: 2rem;
   }
-  .md\:text-\[45px\] {
-    font-size: 45px;
+  .md\:text-\[43px\] {
+    font-size: 43px;
   }
   .md\:text-xl {
     font-size: 1.25rem;

@@ -1,6 +1,6 @@
 <div align="center">
 	<a href="https://habibi2004.pages.dev/"><img src="./static/images/logo.svg" width="150" alt="HBBIIIII" /></a>
-	<h1><a href="https://habibi2004.pages.dev//">Ahmad Habibi</a></h1>
+	<h1><a href="https://habibi2004.pages.dev/">Ahmad Habibi</a></h1>
 </div>
 
 <h5 align="center">

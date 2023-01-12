@@ -3,18 +3,9 @@ title: "{{ replace .TranslationBaseName "-" " " | title }}"
 draft: true
 date: {{ .Date }}
 lang: id
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
 
-tags:
-  - Ubuntu
-  - KDE
-  - Gnome
+image: /cover/default.png
 
-categories:
-  - Game
-  - Server
-  - Desktop
-
-image: /img/default-post-cover.png
-
-description: "Blog and Resume for Ahmad Habibi"
+description: "A personal web and blog site of Ahmad Habibi"
 ---

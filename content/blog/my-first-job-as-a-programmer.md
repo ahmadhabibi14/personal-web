@@ -3,8 +3,11 @@ title: "First Job as A Freelance Programmer, How I get it ?"
 draft: false
 date: 2022-09-09T21:40:34+08:00
 lang: en
+type: article
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
 
-image: /img/default-post-cover.png
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---
 
 {{< images src="/images/first-job/images.png" alt="images" >}}

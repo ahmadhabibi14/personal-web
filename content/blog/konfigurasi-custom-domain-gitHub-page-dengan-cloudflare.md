@@ -3,6 +3,11 @@ title: "Konfigurasi Custom Domain GitHub Page dengan Cloudflare"
 date: 2022-02-11T11:51:10+08:00
 draft: false
 lang: id
+type: article
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
+
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---
 
 Halaman Github (Github Pages) merupakan layanan hosting web statis yang diberikan oleh Github. Layanan ini diberikan secara gratis dan kita juga akan mendapatkan subdomain **.github.io**. Lalu bagaimana dengan yang kustom domain atau domain sendiri?. Untuk mendapatkan SSL, kita dapat menggunakan layanan SSL gratis dari Cloudflare. Sebelum mengkonfigurasi nya, siapkan hal – hal berikut :

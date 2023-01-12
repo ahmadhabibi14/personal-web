@@ -1613,8 +1613,8 @@ html {
   .md\:pt-8 {
     padding-top: 2rem;
   }
-  .md\:text-\[43px\] {
-    font-size: 43px;
+  .md\:text-\[44px\] {
+    font-size: 44px;
   }
   .md\:text-xl {
     font-size: 1.25rem;

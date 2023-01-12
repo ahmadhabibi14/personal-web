@@ -9,6 +9,11 @@
   name="description"
   content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}"
 />
+
+{{ with .Keywords }}
+<meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }} {{ end }}{{ $e }}{{ end }}">
+{{ end }}
+
 <meta content="index,follow" name="robots" />
 <meta property="fb:pages" content="ahmadhabibi7159" />
 <meta name="telegram" content="@ahmadhabibi14" />

@@ -3,6 +3,11 @@ title: "Membaca Quora Memperluas Wawasanku"
 date: 2022-08-24T18:09:42+08:00
 draft: false
 lang: id
+type: article
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
+
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---
 
 {{< images src="/images/quora-menambah-wawasan-ku/01.jpg" alt="images" >}}

@@ -3,6 +3,11 @@ title: "Dokumentasi offline tailwind css"
 date: 2022-05-31T12:13:25+08:00
 draft: false
 lang: id
+type: article
+keywords: JavaScript, Blog, Tech, CSS, HTML, npm, pnpm, yarn, Tailwindcss, Documentation
+
+image: /cover/default.png
+description: "Cara membaca dokumentasi Tailwindcss secara offline"
 ---
 
 Tailwindcss adalah framework css yang banyak di pakai oleh para web developer karena fleksibilitas nya. Maka dari itu saya juga tidak mau ketinggalan untuk memakai framework keren ini. Kendalanya saat saya mau ngoding dan internet tidak ada, dan lupa class class dari tailwind, karena tidak membuka dokumentasi nya, dan tentunya itu cukup sulit. Mana ada orang yang mau ngoding tanpa internet 😹. maka dari itu saya mau membagikan tips untuk membaca dokumentasi dari Tailwind css secara offline 🤓.

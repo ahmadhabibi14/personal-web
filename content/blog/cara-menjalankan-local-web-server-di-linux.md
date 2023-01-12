@@ -3,6 +3,11 @@ title: "Cara Menjalankan Local Web Server Di Linux"
 date: 2022-03-17T19:07:04+08:00
 draft: false
 lang: id
+type: article
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
+
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---
 
 Ketika membuat atau mendesain web, kita bisa saja membuka file HTML nya langsung ke browser. Cukup mudah tinggal drag file html nya ke browser atau klik kanan lalu buka dengan browser. Membuka file html langsung ke browser alamatnya akan diawali dengan **file://** diikuti dengan path file di PC/Laptop anda.

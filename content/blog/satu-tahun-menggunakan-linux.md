@@ -3,6 +3,11 @@ title: "Satu Tahun Menggunakan Linux"
 date: 2022-06-26T10:17:30+08:00
 draft: false
 lang: id
+type: article
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
+
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---
 
 Tidak terasa bahwa sudah 1 tahun saya menggunakan linux sebagai sistem operasi desktop untuk sehari hari. Rasanya pun sangat mengasyikkan, karena linux sangat membebaskan pengguna untuk mengoprek sistem sebagaimana kita mau. Rasanya seperti saya mempunyai kontrol penuh terhadap sistem komputer saya, haha.

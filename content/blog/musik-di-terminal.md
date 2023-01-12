@@ -3,6 +3,11 @@ title: "Putar Musik di Terminal Linux"
 date: 2022-07-02T09:05:57+08:00
 draft: false
 lang: id
+type: article
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
+
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---
 
 {{< images src="/images/musik-di-terminal/01.png" alt="images" >}}

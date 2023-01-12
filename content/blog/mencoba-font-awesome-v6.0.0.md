@@ -3,6 +3,11 @@ title: "Mencoba Font Awesome versi 6"
 date: 2022-02-28T17:56:09+08:00
 draft: false
 lang: id
+type: article
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
+
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---
 
 Font Awesome adalah kumpulan font dan ikon yang berbasis pada CSS dan Less. Font awesome bisa juga dikatakan sebagai framework CSS tetapi khusus untuk ikon.

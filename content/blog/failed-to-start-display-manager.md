@@ -3,6 +3,11 @@ title: "Fix: Manjaro xfce Failed to Start Display Manager"
 date: 2022-01-11T08:52:14+08:00
 draft: false
 lang: en
+type: article
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
+
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---
 
 When using Linux as an Operating System we might be get any error or any other suck things, especially if we use rolling release distribution which usually "not stable". So that we need to make effort to repair our linux system. Well, this error that I get was make me panic enough 🙀 because of my Linux system couldn't displaying login screen as known as **Display Manager**, and it's stuck on Bootloader. I almost give it up and wants to install another distribution or install manjaro again. Fyi, it happen when I turn on laptop, and bootloader couldn't switch to login screen. So that I open the log system with press **Alt + F2** and it looks like the picture below.

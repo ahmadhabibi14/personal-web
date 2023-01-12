@@ -1,11 +1,10 @@
 ---
-date: 2017-12-23T19:50:16+08:00
+date: 2021-11-23T19:50:16+08:00
 draft: false
-keyword: Linux, Lombok, FOSS
+keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
 title: 'HBBIIIII - Ahmad Rizky Nusantara Habibi'
-type: page
+type: website
 
-image: /img/default-post-cover.png
-description: "Tempat belajar Linux dan Free Open Source Softare (FOSS).
-Tersedia tutorial mulai dari dasar hingga mahir."
+image: /cover/default.png
+description: "A personal web and blog site of Ahmad Habibi"
 ---

@@ -560,9 +560,6 @@ q {
 .mt-9 {
   margin-top: 2.25rem;
 }
-.\!block {
-  display: block !important;
-}
 .block {
   display: block;
 }
@@ -1562,9 +1559,6 @@ html {
   }
   .md\:block {
     display: block;
-  }
-  .md\:\!hidden {
-    display: none !important;
   }
   .md\:hidden {
     display: none;

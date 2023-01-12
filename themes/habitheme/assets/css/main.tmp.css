@@ -703,6 +703,10 @@ q {
   margin-top: 2.25rem;
 }
 
+.\!block {
+  display: block !important;
+}
+
 .block {
   display: block;
 }
@@ -1125,10 +1129,6 @@ q {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
-}
-
-.text-\[30px\] {
-  font-size: 30px;
 }
 
 .text-2xl {
@@ -1908,8 +1908,16 @@ html {
     margin-right: auto;
   }
 
+  .md\:\!mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
   .md\:block {
     display: block;
+  }
+
+  .md\:\!hidden {
+    display: none !important;
   }
 
   .md\:hidden {
@@ -1979,10 +1987,6 @@ html {
 
   .md\:pt-8 {
     padding-top: 2rem;
-  }
-
-  .md\:text-\[44px\] {
-    font-size: 44px;
   }
 
   .md\:text-xl {

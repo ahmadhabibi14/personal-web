@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'HBBIIIII - Ahmad Rizky Nusantara Habibi'
 theme = 'habitheme'
 relativeURLs = true
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 

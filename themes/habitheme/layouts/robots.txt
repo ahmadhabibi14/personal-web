@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://habibi2004.pages.dev/sitemap.xml

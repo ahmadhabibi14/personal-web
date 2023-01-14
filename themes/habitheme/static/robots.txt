@@ -1,2 +1,2 @@
-User-agent: *
+User-agent: Googlebot
 Sitemap: https://habibi2004.pages.dev/sitemap.xml

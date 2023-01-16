@@ -1,4 +1,4 @@
-name: Marvel Movies website
-view: https://marvel-movies-free.netlify.app/#/
+name: MooFree - Marvel Movies web
+view: https://moofree.vercel.app/
 source: https://github.com/ahmadhabibi14/MCU-MooFree
 description: A react based web to watch and download any Marvel's movies

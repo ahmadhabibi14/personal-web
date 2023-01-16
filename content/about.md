@@ -14,11 +14,12 @@ image: /cover/default.png
 
 ### What I'm doing now
 
--   Going to college. Yes !! everyday, as a student
--   Enjoying life
--   Looking for good taste music to listen
+-   Enjoying life, exactly
+-   Go to college
+-   Learn to be more productive
+-   Learn Golang, Reactjs, NGINX
 
 ### Random Facts
 
--   I like memes
--   My favorite anime is Detective Conan
+-   I'm a meme lover
+-   I love to watch Anime and Action Movies

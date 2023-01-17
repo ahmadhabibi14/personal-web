@@ -1,6 +1,6 @@
 <div align="center">
 	<a href="https://habibi2004.pages.dev/"><img src="./static/images/logo.svg" width="150" alt="HBBIIIII" /></a>
-	<h1><a href="https://habibi2004.pages.dev/">Ahmad Habibi</a></h1>
+	<h1><a href="https://habibi2004.pages.dev">Ahmad Habibi</a></h1>
 </div>
 
 <h5 align="center">
@@ -9,7 +9,7 @@
 </h5>
 
 <p align="center">
-  <a href="https://habibi2004.pages.dev//" target="_blank">
+  <a href="https://habibi2004.pages.dev/" target="_blank">
     <img alt="Website" src="https://img.shields.io/website?down_message=offline&label=site&up_message=online&url=http%3A%2F%2Fhabibi2004.tech" />
   </a>
   <a href="https://habibi2004.pages.dev//" target="_blank">

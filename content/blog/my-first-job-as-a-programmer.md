@@ -6,7 +6,7 @@ lang: en
 type: article
 keywords: Linux, JavaScript, Go, Blog, Tech, CSS, HTML
 
-image: /cover/default.png
+image: /images/first-job/images.png
 description: "A personal web and blog site of Ahmad Habibi"
 ---
 

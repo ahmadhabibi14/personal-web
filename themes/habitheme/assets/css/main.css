@@ -9,25 +9,25 @@
 
 @layer base {
   hr {
-    @apply border-gray-300 dark:border-gray-700 my-6;
+    @apply my-6 border-gray-300 dark:border-gray-700;
   }
   h1 {
-    @apply font-bold text-4xl mb-5;
+    @apply mb-5 text-4xl font-bold;
   }
   h2 {
-    @apply headings text-3xl pb-1;
+    @apply pb-1 text-3xl headings;
   }
   h3 {
-    @apply headings text-2xl pb-1;
+    @apply pb-1 text-2xl headings;
   }
   h4 {
-    @apply headings text-xl pb-1;
+    @apply pb-1 text-xl headings;
   }
   h5 {
-    @apply headings text-lg pb-1;
+    @apply pb-1 text-lg headings;
   }
   h6 {
-    @apply headings text-base pb-1;
+    @apply pb-1 text-base headings;
   }
   q::before, q::after {
     @apply text-[1.5rem] mx-1;
@@ -42,12 +42,13 @@
   prose-li:marker:text-emerald-500 text-base prose-blockquote:my-3 prose-blockquote:border-l-[6px]
   prose-blockquote:border-l-amber-500 prose-blockquote:rounded-xl prose-blockquote:py-2
   prose-blockquote:px-4 prose-blockquote:bg-amber-400/10 dark:prose-blockquote:bg-amber-400/5 prose-blockquote:w-fit
-  prose-blockquote:text-amber-600 dark:prose-blockquote:text-amber-500 prose-blockquote:italic;
+  prose-blockquote:text-amber-600 dark:prose-blockquote:text-amber-500 prose-blockquote:italic
+  prose-pre:py-2 prose-pre:px-4 prose-pre:overflow-x-scroll prose-pre:rounded-xl prose-pre:my-[10px];
 }
 
 /* Turbo progress bar */
 .turbo-progress-bar {
-  @apply bg-emerald-500 h-1;
+  @apply h-1 bg-emerald-500;
 }
 
 html::-webkit-scrollbar {
@@ -235,19 +236,19 @@ html {
 }
 
 .navbar {
-  @apply h-16 bg-gray-900 fixed w-screen inset-0 border-b border-gray-700 z-40 dark:bg-opacity-75 dark:backdrop-blur;
+  @apply fixed inset-0 z-40 w-screen h-16 bg-gray-900 border-b border-gray-700 dark:bg-opacity-75 dark:backdrop-blur;
 }
 
 .navbarDesktop {
-  @apply w-11/12 md:w-10/12 mx-auto flex flex-row content-center items-center space-x-4 h-full justify-between;
+  @apply flex flex-row justify-between content-center items-center mx-auto space-x-4 w-11/12 h-full md:w-10/12;
 }
 
 .navSeparator {
-  @apply w-px bg-gray-400 h-6 md:flex hidden;
+  @apply hidden w-px h-6 bg-gray-400 md:flex;
 }
 
 .navList {
-  @apply items-center justify-between w-full md:flex hidden;
+  @apply hidden justify-between items-center w-full md:flex;
 }
 
 .navListMenu {
@@ -255,5 +256,5 @@ html {
 }
 
 .navMenuBtn {
-  @apply hover:text-emerald-400 inline-flex flex-row items-center space-x-1.5;
+  @apply inline-flex flex-row items-center space-x-1.5 hover:text-emerald-400;
 }

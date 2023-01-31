@@ -14,8 +14,8 @@
          class="article">
          <header>
             <h1> {{ .Title }} </h1>
-            <div class="my-6 flex flex-row space-x-3 text-sm font-medium text-gray-700 dark:text-gray-400">
-               <a href="/about" class="flex flex-row items-center content-center space-x-1 hover:text-emerald-500">
+            <div class="flex flex-row my-6 space-x-3 text-sm font-medium text-gray-700 dark:text-gray-400">
+               <a href="/about" class="flex flex-row content-center items-center space-x-1 hover:text-emerald-500">
                   <svg
                      width="18"
                      height="18"
@@ -31,7 +31,7 @@
                   </svg>
                   <span title="Written by Ahmad Habibi">Ahmad Habibi</span>
                </a>
-               <label class="flex flex-row items-center content-center space-x-1 cursor-pointer hover:text-emerald-500">
+               <label class="flex flex-row content-center items-center space-x-1 cursor-pointer hover:text-emerald-500">
                   <svg
                      width="18"
                      height="18"
@@ -50,7 +50,7 @@
             </div>
             <hr>
          </header>
-         <div class="prose-a:text-emerald-600">
+         <div class="prose-a:text-emerald-600 prose-p:my-[10px]">
             {{ .Content }}
          </div>
       </article>

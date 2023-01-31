@@ -7,6 +7,6 @@
 <!-- Get image -->
 {{$img := resources.Get $src}}
 
-<p class="text-center my-4 mx-auto">
-  <img src="{{ $img.Permalink }}" class="rounded-md shadow-md border border-gray-200 mx-auto" alt="{{ $alt }}" width="100%">
+<p class="mx-auto my-4 text-center">
+  <img src="{{ $img.Permalink }}" class="mx-auto rounded-md border border-gray-200 shadow-md dark:border-gray-600" alt="{{ $alt }}" width="100%">
 </p>

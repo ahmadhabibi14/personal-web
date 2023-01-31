@@ -9,13 +9,13 @@
   </blockquote>
   <hr />
   <div
-    class="flex flex-wrap flex-row justify-center items-stretch content-stretch"
+    class="flex flex-row flex-wrap justify-center items-stretch content-stretch"
   >
     {{ range .Site.Data.projects }}
     <figure
-      class="w-full sm:w-5/12 flex flex-no-wrap flex-col justify-between border border-gray-300 dark:border-gray-700 shadow-md px-5 md:px-10 py-5 md:py-8 h-auto rounded-xl md:m-3 mb-3"
+      class="flex flex-col justify-between px-5 py-5 mb-3 w-full h-auto rounded-xl border border-gray-300 shadow-md sm:w-5/12 flex-no-wrap dark:border-gray-700 md:px-10 md:py-8 md:m-3"
     >
-      <div class="flex flex-col space-y-2 mb-5">
+      <div class="flex flex-col mb-5 space-y-2">
         <figcaption
           class="font-bold text-lg pb-2 mb-2 border-b-[2px] border-emerald-500 border-dashed"
         >
@@ -24,7 +24,7 @@
         <p>{{ .description }}</p>
       </div>
       <div
-        class="flex flex-row justify-end space-x-2 items-center content-center font-medium"
+        class="flex flex-row justify-end content-center items-center space-x-2 font-medium"
       >
         <a
           class="group cursor-pointer text-sm py-1.5 px-3 border-[2px] shadow border-amber-500 text-amber-500 hover:bg-amber-500/20 hover:border-amber-400 hover:text-amber-400 rounded-xl flex flex-row items-center space-x-1"
@@ -35,7 +35,7 @@
             width="15"
             height="15"
             viewBox="0 0 24 24"
-            class="fill-none stroke-current group-hover:fill-amber-500 group-hover:stroke-amber-700"
+            class="stroke-current fill-none group-hover:fill-amber-500 group-hover:stroke-amber-700"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -56,7 +56,7 @@
           target="_blank"
         >
           <svg
-            class="fill-none stroke-current group-hover:stroke-blue-700 group-hover:fill-blue-400"
+            class="stroke-current fill-none group-hover:stroke-blue-700 group-hover:fill-blue-400"
             width="15"
             height="15"
             viewBox="0 0 24 24"

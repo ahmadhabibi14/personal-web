@@ -1332,6 +1332,17 @@ q {
   color: rgb(217 119 6 / var(--tw-text-opacity));
 }
 
+.article :is(:where(pre):not(:where([class~="not-prose"] *))) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: scroll;
+  border-radius: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .article :is(:where(ol):not(:where([class~="not-prose"] *))) {
   list-style-type: decimal;
 }
@@ -1893,6 +1904,11 @@ html {
   color: rgb(16 185 129 / var(--tw-text-opacity));
 }
 
+.prose-p\:my-\[10px\] :is(:where(p):not(:where([class~="not-prose"] *))) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .prose-a\:text-emerald-600 :is(:where(a):not(:where([class~="not-prose"] *))) {
   --tw-text-opacity: 1;
   color: rgb(5 150 105 / var(--tw-text-opacity));
@@ -1914,6 +1930,11 @@ html {
 .dark .dark\:border-emerald-500 {
   --tw-border-opacity: 1;
   border-color: rgb(16 185 129 / var(--tw-border-opacity));
+}
+
+.dark .dark\:border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
 .dark .dark\:bg-gray-800 {

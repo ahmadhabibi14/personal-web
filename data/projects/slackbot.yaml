@@ -1,0 +1,4 @@
+name: Slack Bot
+view: https://github.com/ahmadhabibi14/slackbot-app
+source: https://github.com/ahmadhabibi14/slackbot-app
+description: A chat bot for Slack Messaging app, built with Go Lang

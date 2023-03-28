@@ -12,10 +12,10 @@
   <a href="https://habibi2004.pages.dev/" target="_blank">
     <img alt="Website" src="https://img.shields.io/badge/site-online-green" />
   </a>
-  <a href="https://habibi2004.pages.dev//" target="_blank">
+  <a href="https://habibi2004.pages.dev/" target="_blank">
     <img alt="Website" src="https://img.shields.io/badge/open-web-blue" />
   </a>
 </p>
 <h5 align="center">
-	Copyright © 2023 | <a href="https://habibi2004.pages.dev//">Ahmad Habibi</a>
+	Copyright © 2023 | <a href="https://habibi2004.pages.dev/">Ahmad Habibi</a>
 </h5>

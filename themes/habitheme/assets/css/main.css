@@ -9,6 +9,10 @@
   }
 }
 
+.bg-gray-950 {
+  background-color: #030712 !important;
+}
+
 .headings {
   @apply font-bold border-b-[2px] border-dashed border-emerald-500 w-fit my-4;
 }

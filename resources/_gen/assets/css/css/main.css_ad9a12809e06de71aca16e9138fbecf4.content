@@ -1021,6 +1021,10 @@ q {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.bg-gray-950 {
+  background-color: #030712 !important;
+}
+
 .headings {
   margin-top: 1rem;
   margin-bottom: 1rem;

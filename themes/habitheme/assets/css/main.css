@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .bg-gray-950 {
+    background-color: #030712;
+  }
+}
+
 .headings {
   @apply font-bold border-b-[2px] border-dashed border-emerald-500 w-fit my-4;
 }
@@ -228,7 +234,7 @@ html {
 }
 
 .body {
-  @apply text-gray-700 dark:bg-gray-900 dark:text-gray-300;
+  @apply text-gray-700 dark:bg-gray-950 dark:text-gray-300;
 }
 
 .main {

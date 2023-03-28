@@ -1,0 +1,4 @@
+name: WhatsApp Bot
+view: https://wa.me/6285339384959?text=/ai%20what%20is%20whatsapp%20?
+source: https://github.com/ahmadhabibi14/wabot
+description: WhatsApp bot that have many features, including integration with OpenAI AI models (GPT-3, Dall-E)

@@ -22,5 +22,5 @@ target = "assets/images"
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = 'github dark'
+    style = 'dracula'
     tabWidth = 4

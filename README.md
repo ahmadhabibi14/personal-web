@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://habibi2004.pages.dev/" target="_blank">
-    <img alt="Website" src="https://img.shields.io/website?down_message=online&label=site&up_message=online&url=http%3A%2F%2Fhabibi2004.tech" />
+    <img alt="Website" src="https://img.shields.io/website?&label=site&up_message=online&url=http%3A%2F%2Fhabibi2004.tech" />
   </a>
   <a href="https://habibi2004.pages.dev//" target="_blank">
     <img alt="Website" src="https://img.shields.io/badge/open-web-blue" />

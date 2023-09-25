@@ -7,7 +7,7 @@ keywords: Go, Blog, Tech, HTML
 
 image: /cover/default.png
 
-description: "A personal web and blog site of Ahmad Habibi"
+description: "How to make upload file handler with Golang"
 ---
 
 In this tutorial, we are going to be building simple file-upload HTTP server that allows you to upload your files to the server running your Go application.

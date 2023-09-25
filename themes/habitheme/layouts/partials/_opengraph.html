@@ -14,3 +14,8 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="{{ .Title }}" />
+
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="{{- with .Site.Title -}} {{- . -}} {{- end -}}" name="twitter:title"/>
+<meta content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" name="twitter:description"/>
+<meta content="{{- with .Params.image -}}{{- . | absURL -}}{{- end -}}" name="twitter:image"/>

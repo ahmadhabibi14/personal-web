@@ -11,7 +11,7 @@
     {{ range (.Site.RegularPages.GroupByDate "2006") }}
     <div class="flex flex-col mt-1 mb-2 space-y-2">
 
-      <div class="flex flex-row justify-center items-center py-1.5 mx-auto mb-2 space-x-2 w-full text-emerald-500 rounded-lg border-2 border-emerald-500 cursor-pointer bg-emerald-500/10 dark:bg-emerald-500/20 dark:border-emerald-500">
+      <div class="flex flex-row justify-center items-center py-1.5 mx-auto mb-2 space-x-2 w-fit px-5 text-emerald-500 rounded-lg border-2 border-emerald-500 cursor-pointer bg-emerald-500/10 dark:bg-emerald-500/20 dark:border-emerald-500">
         <svg
           width="26"
           height="26"
@@ -26,7 +26,7 @@
             d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
           ></path>
         </svg>
-        <span class="text-xl font-bold">{{ .Key }}</span>
+        <span class="text-xl font-bold">year:{{ .Key }}</span>
       </div>
   
       <div class="flex-col space-y-3 font-medium w-fullcflex">
@@ -42,19 +42,18 @@
             <time>{{.Date.Format "January 02"}}</time>
 
             <div class="flex flex-row content-center items-center">
-              <p title="Written by Ahmad Habibi">
-                Ahmad Habibi
-              </p>
+              <time datetime="{{.Date}}" title='Posted on {{.Date.Format " January 02, 2006 - 3:04 PM"}}'>{{.Date.Format
+                "3:04 PM"}}</time>
               <span class="ml-2 w-px h-3 bg-gray-400"></span>
               <div
                 class="flex flex-row items-center ml-2"
-                title="
+                title='
                   {{ if (eq .Params.lang "en") }}
                     English
                   {{ else }}
                     Bahasa Indonesia
-                  {{ end }}"
-              >
+                  {{ end }}'
+                >
                 <svg 
                   width="13"
                   height="13"

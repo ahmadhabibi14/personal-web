@@ -11,3 +11,6 @@ image: /cover/default.png
 ---
 
 If you have a question, talk to me about a project collaboration or just say Hi 👋, fill up the form below. I'll respond as soon as possible! 😃
+
+\
+An email will be send to my email after you fill the forms and click the submit button

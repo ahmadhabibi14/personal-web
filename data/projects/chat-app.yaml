@@ -1,0 +1,4 @@
+name: VFtalk - Single room chat
+view: https://github.com/ahmadhabibi14/chat-app
+source: https://github.com/ahmadhabibi14/chat-app
+description: A simple chat app of implementation of Golang, Fiber, Handlebars, and TailwindCSS

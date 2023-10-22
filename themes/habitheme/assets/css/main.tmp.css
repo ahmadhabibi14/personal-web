@@ -1245,6 +1245,14 @@ q {
   color: rgb(225 29 72 / var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
+.decoration-emerald-500 {
+  text-decoration-color: #10b981;
+}
+
 .caret-emerald-500 {
   caret-color: #10b981;
 }

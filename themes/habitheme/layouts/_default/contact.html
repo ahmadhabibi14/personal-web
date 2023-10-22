@@ -1,166 +1,106 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  x-data="{ darkMode: localStorage.getItem('dark') === 'true'}"
-  x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
-  :class="{ 'dark': darkMode }"
->
-   <head>{{- partial "head.html" . -}}</head>
-   <body class="body">
-      {{- partial "header.html" . -}}
-      <main class="main">
-         <article>
-            <h1 class="text-emerald-500">{{ .Title }}</h1>
-            <hr/>
-            <p>{{ .Content }}</p>
-            <br/>
-         </article>
-         
-         <div class="flex justify-between flex-col lg:flex-row lg:space-x-6">
-            <!-- Send Message -->
-            <form
-               id="myForm"
-               class="text-base flex flex-col justify-start space-y-4 w-full lg:w-8/12 p-0"
-               >
-               <div class="flex flex-col lg:flex-row lg:space-x-3">
-                  <input
-                     autocomplete="off"
-                     type="name"
-                     name="name"
-                     class="mb-4 lg:mb-0 lg:w-1/2 caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
-                     id="name"
-                     placeholder="Your Name"
-                  />
-                  <input
-                     autocomplete="email"
-                     type="email"
-                     name="email"
-                     class="lg:w-1/2 caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
-                     id="email"
-                     placeholder="Your Email"
-                  />
-               </div>
-               <input
-                  autocomplete="off"
-                  type="subject"
-                  name="subject"
-                  class="caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
-                  id="subject"
-                  placeholder="Subject"
-               />
-               <textarea
-                  rows="6"
-                  placeholder="Your Message"
-                  class="caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
-                  name="message"
-                  id="message"
-               ></textarea>
-               <button
-                  type="submit"
-                  class="font-bold group w-fit border-emerald-400 bg-emerald-500 text-gray-900 hover:bg-emerald-600 inline-flex text-sm py-2 px-4 border-[2px] flex-row items-center rounded-xl"
-               >
-                  <svg
-                     class="fill-none stroke-current group-hover:fill-gray-900"
-                     width="15"
-                     height="15"
-                     viewBox="0 0 24 24"
-                     stroke-width="2.5"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     >
-                     <line x1="22" y1="2" x2="11" y2="13" />
-                     <polygon points="22 2 15 22 11 13 2 9 22 2" />
+<html lang="en" x-data="{ darkMode: localStorage.getItem('dark') === 'true'}"
+   x-init="$watch('darkMode', val => localStorage.setItem('dark', val))" :class="{ 'dark': darkMode }">
+
+<head>{{- partial "head.html" . -}}</head>
+
+<body class="body">
+   {{- partial "header.html" . -}}
+   <main class="main">
+      <article>
+         <h1 class="text-emerald-500">{{ .Title }}</h1>
+         <hr />
+         <p>{{ .Content }}</p>
+         <br />
+      </article>
+
+      <div class="flex justify-between flex-col lg:flex-row lg:space-x-6">
+         <!-- Send Message -->
+         <form id="myForm" class="text-base flex flex-col justify-start space-y-4 w-full lg:w-8/12 p-0">
+            <div class="flex flex-col lg:flex-row lg:space-x-3">
+               <input autocomplete="off" type="name" name="name"
+                  class="mb-4 lg:mb-0 lg:w-1/2 caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
+                  id="name" placeholder="Your Name" />
+               <input autocomplete="email" type="email" name="email"
+                  class="lg:w-1/2 caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
+                  id="email" placeholder="Your Email" />
+            </div>
+            <input autocomplete="off" type="subject" name="subject"
+               class="caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
+               id="subject" placeholder="Subject" />
+            <textarea rows="6" placeholder="Your Message"
+               class="caret-emerald-500 py-2 px-2.5 focus:outline-emerald-500 border-[2px] border-emerald-500 dark:bg-gray-800 rounded-lg shadow-md"
+               name="message" id="message"></textarea>
+            <button type="submit" id="sendEmailBtn"
+               class="disabled:bg-emerald-400 font-bold group w-fit border-emerald-400 bg-emerald-500 text-gray-900 hover:bg-emerald-600 inline-flex text-sm py-2 px-4 border-[2px] flex-row items-center rounded-xl">
+               <svg id="sendIcon" class="fill-none stroke-current group-hover:fill-gray-900" width="15" height="15"
+                  viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+               </svg>
+               <svg id="loadingIcon" viewBox="0 0 24 24" class="animate-spin fill-none stroke-current group-hover:fill-gray-900" width="18" height="18"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-loader">
+                  <line x1="12" y1="2" x2="12" y2="6"></line>
+                  <line x1="12" y1="18" x2="12" y2="22"></line>
+                  <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                  <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                  <line x1="2" y1="12" x2="6" y2="12"></line>
+                  <line x1="18" y1="12" x2="22" y2="12"></line>
+                  <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                  <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+               </svg>
+               <span class="ml-1">Send</span>
+            </button>
+         </form>
+
+         <!-- INFO -->
+         <div
+            class="flex flex-col justify-start space-y-3 w-fit lg:w-auto mt-6 lg:m-0 h-fit border border-gray-300 dark:border-gray-700 shadow-md rounded-xl p-8 font-medium">
+            <!-- Address -->
+            <div class="flex flex-row space-x-4">
+               <a class="hover:text-emerald-400 text-emerald-500 cursor-pointer transition-all duration-100 ease-linear hover:scale-110"
+                  href="https://goo.gl/maps/xuxNrUg8i513Re5j9">
+                  <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                     aria-hidden="true">
+                     <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span class="ml-1">Send</span>
-               </button>
-            </form>
-            
-            <!-- INFO -->
-            <div class="flex flex-col justify-start space-y-3 w-fit lg:w-auto mt-6 lg:m-0 h-fit border border-gray-300 dark:border-gray-700 shadow-md rounded-xl p-8 font-medium">
-               <!-- Address -->
-               <div class="flex flex-row space-x-4">
-                  <a
-                     class="hover:text-emerald-400 text-emerald-500 cursor-pointer transition-all duration-100 ease-linear hover:scale-110"
-                     href="https://goo.gl/maps/xuxNrUg8i513Re5j9"
-                     >
-                     <svg
-                        width="26"
-                        height="26"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                        >
-                        <path
-                           stroke-linecap="round"
-                           stroke-linejoin="round"
-                           d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                           stroke-linecap="round"
-                           stroke-linejoin="round"
-                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                     </svg>
-                  </a>
-                  <p>Lombok, Indonesia</p>
-               </div>
+               </a>
+               <p>Lombok, Indonesia</p>
+            </div>
 
-               <!-- Phone -->
-               <div class="flex flex-row space-x-4">
-                  <a
-                     class="hover:text-emerald-400 text-emerald-500 cursor-pointer transition-all duration-100 ease-linear hover:scale-110"
-                     href="tel:+6285339384959"
-                     >
-                     <svg
-                        width="26"
-                        height="26"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                        >
-                        <path
-                           stroke-linecap="round"
-                           stroke-linejoin="round"
-                           d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                     </svg>
-                  </a>
-                  <p>+62 853-3938-4959</p>
-               </div>
+            <!-- Phone -->
+            <div class="flex flex-row space-x-4">
+               <a class="hover:text-emerald-400 text-emerald-500 cursor-pointer transition-all duration-100 ease-linear hover:scale-110"
+                  href="tel:+6285339384959">
+                  <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                     aria-hidden="true">
+                     <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+               </a>
+               <p>+62 853-3938-4959</p>
+            </div>
 
-               <!-- e-Mail -->
-               <div class="flex flex-row space-x-4">
-                  <a
-                     class="hover:text-emerald-400 text-emerald-500 cursor-pointer transition-all duration-100 ease-linear hover:scale-110"
-                     href="mailto:habi@ternaklinux.com"
-                     >
-                     <svg
-                        class="flex-none"
-                        width="26"
-                        height="26"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                        >
-                        <path
-                           stroke-linecap="round"
-                           stroke-linejoin="round"
-                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                     </svg>
-                  </a>
-                  <p class="flex-shrink">habi@ternaklinux.com</p>
-               </div>
+            <!-- e-Mail -->
+            <div class="flex flex-row space-x-4">
+               <a class="hover:text-emerald-400 text-emerald-500 cursor-pointer transition-all duration-100 ease-linear hover:scale-110"
+                  href="mailto:habi@ternaklinux.com">
+                  <svg class="flex-none" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                     stroke="currentColor" aria-hidden="true">
+                     <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+               </a>
+               <p class="flex-shrink">habi@ternaklinux.com</p>
             </div>
          </div>
-      </main>
-      {{- partial "footer.html" . -}}
-      {{- partial "_emailjs.html" . -}}
-   </body>
+      </div>
+   </main>
+   {{- partial "footer.html" . -}}
+   {{- partial "_emailjs.html" . -}}
+</body>
+
 </html>

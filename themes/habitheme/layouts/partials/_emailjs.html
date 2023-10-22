@@ -10,7 +10,13 @@
 ></script>
 
 <script type="text/javascript">
+  let sendIcon = document.getElementById("sendIcon");
+  let loadingIcon = document.getElementById("loadingIcon");
+  let sendEmailBtn = document.getElementById("sendEmailBtn");
+
   (function () {
+    sendIcon.style.display = "block";
+    loadingIcon.style.display = "none";
     emailjs.init("user_YZqd2C9w9VfIre9jaUg08");
   })();
 
@@ -20,16 +26,25 @@
     .addEventListener("submit", function (event) {
       event.preventDefault();
 
+      sendEmailBtn.disabled = true;
+      sendIcon.style.display = "none";
+      loadingIcon.style.display = "block";
       const serviceID = "service_sdscf8n";
       const templateID = "template_3jsgec3";
 
       // send the email here
       emailjs.sendForm(serviceID, templateID, this).then(
         (response) => {
+          sendEmailBtn.disabled = false;
+          sendIcon.style.display = "block";
+          loadingIcon.style.display = "none";
           alert("Email sent 😎️👌️, now wait for further response from me");
         },
         (error) => {
-          alert("Failed to send Email, you're dumb 💩️", error);
+          sendEmailBtn.disabled = false;
+          sendIcon.style.display = "block";
+          loadingIcon.style.display = "none";
+          alert("Failed to send Email, you're dumb 💩️");
         }
       );
     });

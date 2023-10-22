@@ -648,6 +648,14 @@ q {
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1502,6 +1510,11 @@ html {
 
 .focus\:outline-emerald-500:focus {
   outline-color: #10b981;
+}
+
+.disabled\:bg-emerald-400:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 211 153 / var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:fill-amber-500 {

@@ -1402,8 +1402,12 @@ html::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-html::-webkit-scrollbar-track {
+html.dark::-webkit-scrollbar-track {
   background: #111827;
+}
+
+html::-webkit-scrollbar-track {
+  background: #FFF;
 }
 
 html::-webkit-scrollbar-thumb {

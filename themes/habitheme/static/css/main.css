@@ -284,10 +284,19 @@ html {
 
 @keyframes glow {
 	100% {
-    color: #6b7280;
+    color: #064e3b;
   }
 	0%  {
 		color: #374151; 
+	}
+}
+
+@keyframes glowDark {
+	100% {
+    color: #d1fae5;
+  }
+	0%  {
+		color: #d1d5db; 
 	}
 }
 
@@ -295,4 +304,10 @@ html {
   @apply text-gray-700;
   opacity: 1 !important;
   animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+.dark .glow {
+  @apply text-gray-300;
+  opacity: 1 !important;
+  animation: glowDark 2.5s ease-in-out infinite alternate;
 }

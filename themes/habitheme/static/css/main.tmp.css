@@ -1816,11 +1816,21 @@ html {
 
 @keyframes glow {
   100% {
-    color: #6b7280;
+    color: #064e3b;
   }
 
   0%  {
     color: #374151;
+  }
+}
+
+@keyframes glowDark {
+  100% {
+    color: #d1fae5;
+  }
+
+  0%  {
+    color: #d1d5db;
   }
 }
 
@@ -1829,6 +1839,13 @@ html {
   color: rgb(55 65 81 / var(--tw-text-opacity));
   opacity: 1 !important;
   animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+.dark .glow {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+  opacity: 1 !important;
+  animation: glowDark 2.5s ease-in-out infinite alternate;
 }
 
 .hover\:scale-105:hover {

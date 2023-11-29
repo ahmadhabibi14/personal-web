@@ -272,3 +272,22 @@ html {
 .navMenuBtn {
   @apply inline-flex flex-row items-center space-x-1.5 hover:text-emerald-400;
 }
+
+.main-title-text {
+  @apply pt-3 !mb-2 md:!mb-4 leading-tight text-4xl font-bold;
+}
+
+@keyframes glow {
+	100% {
+    color: #6b7280;
+  }
+	0%  {
+		color: #374151; 
+	}
+}
+
+.glow {
+  @apply text-gray-700;
+  opacity: 1 !important;
+  animation: glow 2.5s ease-in-out infinite alternate;
+}

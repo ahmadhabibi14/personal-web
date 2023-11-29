@@ -277,6 +277,11 @@ html {
   @apply pt-3 !mb-2 md:!mb-4 leading-tight text-4xl font-bold;
 }
 
+.main-title-text span {
+  @apply text-4xl font-bold;
+}
+
+
 @keyframes glow {
 	100% {
     color: #6b7280;

@@ -1,13 +1,13 @@
 {
-  "name": "My Personal Web",
+  "name": "personal_web",
   "version": "1.0.0",
   "description": "Personal Web build with Hugo",
   "main": "index.js",
   "scripts": {
     "start": "hugo server --renderToDisk",
     "draft": "hugo server -D --renderToDisk",
-    "tailwind:watch": "npx tailwindcss -i ./themes/habitheme/assets/css/main.css -o ./themes/habitheme/assets/css/main.tmp.css --watch",
-    "dev": "hugo server --disableFastRender --renderToDisk & npm run tailwind:watch && `fg`"
+    "tailwind": "npx tailwindcss -i ./themes/habitheme/static/css/main.css -o ./themes/habitheme/static/css/main.tmp.css --watch",
+    "dev": "hugo server --disableFastRender --renderToDisk"
   },
   "repository": {
     "type": "git",

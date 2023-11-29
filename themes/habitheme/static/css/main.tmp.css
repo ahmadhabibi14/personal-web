@@ -1808,6 +1808,12 @@ html {
   }
 }
 
+.main-title-text span {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
 @keyframes glow {
   100% {
     color: #6b7280;

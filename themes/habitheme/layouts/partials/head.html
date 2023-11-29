@@ -30,16 +30,7 @@
 {{ hugo.Generator }}
 
 <!-- CSS TAilwind -->
-{{ $styles := resources.Get "css/main.css" | postCSS }} {{ if site.IsServer }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 <link rel="stylesheet" href="/css/main.tmp.css" />
-{{ else }} {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-<link
-  rel="stylesheet"
-  href="{{ $styles.RelPermalink }}"
-  integrity="{{ $styles.Data.Integrity }}"
-/>
-{{ end }}
 
 <link
   rel=preload

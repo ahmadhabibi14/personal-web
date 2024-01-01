@@ -58,7 +58,7 @@
 
 /* Turbo progress bar */
 .turbo-progress-bar {
-  @apply h-1 bg-emerald-500;
+  @apply h-1 bg-gradient-to-r from-emerald-500 to-sky-500;
 }
 
 html::-webkit-scrollbar {

@@ -1386,8 +1386,13 @@ q {
 
 .turbo-progress-bar {
   height: 0.25rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #10b981 var(--tw-gradient-from-position);
+  --tw-gradient-from-position:  ;
+  --tw-gradient-to: rgb(16 185 129 / 0)  var(--tw-gradient-from-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #0ea5e9 var(--tw-gradient-to-position);
+  --tw-gradient-to-position:  ;
 }
 
 html::-webkit-scrollbar {

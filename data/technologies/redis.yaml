@@ -1,0 +1,3 @@
+name: Redis
+image: /icons/redis.svg
+web: https://redis.io/

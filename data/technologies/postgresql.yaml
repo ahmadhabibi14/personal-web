@@ -1,0 +1,3 @@
+name: PostgreSQL
+image: /icons/postgresql.svg
+web: https://www.postgresql.org

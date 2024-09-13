@@ -21,7 +21,6 @@ I made this blog mainly aimed to be my personal reference as a learning proccess
 -   Enjoying life, exactly
 -   Go to college
 -   Learn to be more productive
--   Learn Golang, Backend development, I want to be expert on it
 
 ### Random Facts
 
